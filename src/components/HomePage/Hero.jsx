@@ -81,7 +81,7 @@ export default function Hero() {
           <AnimatePresence mode="wait">
             <motion.span
               key={slides[currentSlide].subText}
-              className={`${nunito.className} text-xl sm:text-4xl text-gray-100`}
+              className={`${nunito.className} text-3xl sm:text-5xl text-gray-100`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -214,7 +214,7 @@ export default function Hero() {
 
           {/* Uncomment to add additional images with similar animations */}
 
-          <motion.div
+          {/* <motion.div
             className="absolute top-2 right-10 sm:right-16 w-16 h-16 sm:w-20 sm:h-20 bg-cover bg-center rounded-full shadow-lg"
             style={{ backgroundImage: "url('hero-2.jpg')" }}
             initial={{ scale: 0 }}
@@ -241,7 +241,7 @@ export default function Hero() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-          ></motion.div>
+          ></motion.div> */}
         </div>
       </div>
 
