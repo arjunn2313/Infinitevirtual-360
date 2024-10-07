@@ -59,7 +59,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300  ${
         isScrolled || pathname !== "/" ? "  " : "bg-transparent text-black"
-      } py-2  px-2 sm:px-0 mx-auto`}
+      } py-2  px-2 sm:px-0 mx-auto overflow-hidden`}
       //   className={`  py-2`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-full">

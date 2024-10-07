@@ -57,7 +57,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-cover bg-center p-8 sm:p-16 lg:px-24">
+    <div className="relative min-h-screen bg-cover bg-center p-8 sm:p-16 lg:px-24 overflow-hidden">
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-100 z-0"></div>
 

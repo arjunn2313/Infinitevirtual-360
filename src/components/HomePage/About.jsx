@@ -15,7 +15,7 @@ const nunito = Nunito({
 
 const AboutUs = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:flex items-center justify-between">
         
         {/* Image Section with Animation and Hover Effect */}
