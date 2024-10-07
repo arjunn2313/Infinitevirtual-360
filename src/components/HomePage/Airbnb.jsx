@@ -56,7 +56,7 @@ export default function AirbnbHostsSection() {
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 bg-gray-100">
       <div className={`${nunito.className} container mx-auto px-6 text-center`}>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-8 fade-in font-suse">
           Enhance Your <span className="text-blue-600">Airbnb Listing</span>{" "}

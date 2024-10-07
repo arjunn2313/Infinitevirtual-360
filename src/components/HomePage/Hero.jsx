@@ -1,7 +1,19 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Inter, Nunito, Playfair_Display, Poppins } from "next/font/google";
+import {
+  Bebas_Neue,
+  Dancing_Script,
+  Inter,
+  Lora,
+  Montserrat,
+  Nunito,
+  Oswald,
+  Playfair_Display,
+  Poppins,
+  Raleway,
+  Source_Sans_3,
+} from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
@@ -12,9 +24,9 @@ const popins = Poppins({
   weight: "400",
 });
 
-const nunito = Nunito({
+const nunito = Oswald({
   subsets: ["latin"],
-  weight: "800",
+  weight: "700",
 });
 
 const slides = [
@@ -48,13 +60,13 @@ export default function Hero() {
     setIsVideoOpen(false);
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000); // Change slide every 3 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+  //   }, 3000);
 
-    return () => clearInterval(interval); // Clean up on component unmount
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <div className="relative min-h-screen bg-cover bg-center p-8 sm:p-16 lg:px-24 overflow-hidden">
@@ -81,7 +93,7 @@ export default function Hero() {
           <AnimatePresence mode="wait">
             <motion.span
               key={slides[currentSlide].subText}
-              className={`${nunito.className} text-3xl sm:text-5xl text-gray-100`}
+              className={`${nunito.className} text-4xl sm:text-6xl text-gray-100`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
@@ -132,9 +144,9 @@ export default function Hero() {
             </motion.h4>
           </AnimatePresence>
           <div className={`${popins.className}`}>
-            <button className="bg-white py-2    rounded-full flex  justify-center items-center gap-3 px-5 transition-all duration-300 hover:bg-orange-600 hover:text-white hover:border-orange-600">
+            <button className="bg-white py-2    rounded-full flex  justify-center items-center gap-3 px-3 sm:px-5 transition-all duration-300 hover:bg-orange-600 hover:text-white hover:border-orange-600">
               Discover Our Services
-              <span className="hidden sm:flex bg-orange-600 p-3 text-white rounded-full transition-all duration-300 hover:bg-white hover:text-orange-600">
+              <span className="  bg-orange-600 p-3 text-white rounded-full transition-all duration-300 hover:bg-white hover:text-orange-600">
                 <FaArrowRight size={20} />
               </span>
             </button>
@@ -164,7 +176,7 @@ export default function Hero() {
         </div> */}
         <div className="flex-1 relative flex justify-center items-center">
           <motion.div
-            className="w-64 h-64 sm:w-80 sm:h-80 bg-center bg-cover rounded-full overflow-hidden shadow-lg relative"
+            className="w-64 h-64 sm:w-96 sm:h-96 bg-center bg-cover rounded-full overflow-hidden shadow-lg relative"
             style={{
               backgroundImage: "url('hero.jpg')",
             }}
@@ -192,9 +204,28 @@ export default function Hero() {
                   "0 0 15px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4)",
               }}
             >
-              {/* Animated ring around the icon */}
+              {/* Puff effect */}
               <motion.div
-                className="bg-orange-600 rounded-full p-2 flex justify-center items-center"
+                className="absolute inset-0 rounded-full"
+                style={{
+                  boxShadow:
+                    "0 0 15px rgba(255, 165, 0, 0.6), 0 0 30px rgba(255, 165, 0, 0.4)",
+                }}
+                initial={{ opacity: 0.5, scale: 1 }}
+                animate={{
+                  opacity: [0.5, 0],
+                  scale: [1, 1.8],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeOut",
+                }}
+              />
+
+              {/* Icon with animation */}
+              <motion.div
+                className="bg-orange-600 rounded-full p-2 flex justify-center items-center relative"
                 initial={{ scale: 1 }}
                 whileHover={{
                   scale: 1.2,
@@ -256,7 +287,7 @@ export default function Hero() {
               ✕
             </button>
             <video
-              src="your-video-file.mp4"
+              src="https://youtu.be/HvLWniBQA2o?si=e2Hkw7SQa9veeRa5"
               className="w-full"
               controls
               autoPlay
