@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    images: {
+      domains: ['app.cloudpano.com', 'my.matterport.com'],  
+    },
+  };
+  
+  export default nextConfig;
+  
