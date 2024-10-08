@@ -22,3 +22,15 @@ This is a static website showcasing a real estate photographer's 360-degree virt
     - `pages/` – Website pages (e.g., index.js)
   - `README.md` – Project documentation
 
+ ## Clone this repository:
+- **git clone** https://github.com/yourusername/real-estate-360.git
+- **Install dependencies** - npm install
+- **Run the development server** -run development server
+
+## Features
+- **Immersive 360° Tours**: Explore properties with virtual tours.
+- **Responsive Design**: Looks great on any device.
+- **FAQ Section**: Easily find answers to common questions.
+- **Smooth Animations**: Created with Framer Motion.
+
+
