@@ -22,3 +22,5 @@ This is a static website showcasing a real estate photographer's 360-degree virt
     - `pages/` – Website pages (e.g., index.js)
   - `README.md` – Project documentation
 
+
+
